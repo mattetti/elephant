@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Golang Weekly Issue 139: December 15, 2016</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="alternate" type="application/rss+xml" title="Golang Weekly" href="/rss/10che6a1">
+  <link rel="shortcut icon" href="/favicon.png">
+</head>
+<body class="go dom dom-go issues 139 issue go issue">
+  <header class="contained">
+    <nav>
+    <div class="sitename" style="cursor: pointer" onclick="window.location.href='/'"><a href="/">Golang Weekly</a></div>
+
+    <div class="items">
+        
+            <a href="/issues" class="issues">Archives</a><span class="divider">|</span>
+            <a href="/latest" class="latest">Latest</a><span class="nomobile"><span class="divider">|</span>
+            <a href="/rss/1hb5bbp3">RSS</a></span>
+        
+    </div>
+  </nav>
+
+  
+</header>
+
+  <main>
+
+<section class="contained">
+
+  <div class="nomobile"><div class="subscribe_box" class="">
+<form class="subscribe" action="/subscribe" method="POST">
+  <input type="email" placeholder="Want to subscribe? Enter your address here" class="email" name="email" id="email" /><button class="awesome" type="submit">Subscribe now &raquo;</button>
+  <div class="smallprint">Easy to unsubscribe at any time. Your e-mail address <a href="https://cooperpress.com/spam.html">is safe</a> &mdash; here's <a href="https://cooperpress.com/legal/privacy/">our privacy policy.</a></div>
+  <input type="hidden" name="_csrf" value="lVJ-VgTp3y4B4-NN1-3dI12KQ90raZyB3bAUtdFfG8o" />
+</form>
+</div>
+</div>
+
+  <div class="pager">
+    <div class="prev">
+      
+        <a href="/issues/138">&laquo; Prev</a>
+      
+    </div>
+    <div class="center">
+      <!-- Issue 139 -->
+    </div>
+    <div class="next">
+      
+        <a href="/issues/140">Next &raquo;</a>
+      
+    </div>
+  </div>
+
+  <div class="issue-html"><body>
+
+
+  
+  
+	
+	
+
+
+
+
+
+
+
+
+<center><table align="center" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; margin: 8px 0 0; padding: 0; table-layout: fixed; text-align: center;" class="text header">
+  <tr><td align="center" style="border-collapse: collapse; margin: 0; padding: 0;">
+  <div class="logo" style="background: #6cd7e5; color: #fff; display: inline-block; font-size: 26px; font-weight: 500; line-height: 1.1em; margin: 0 auto 8px; padding: 0.6em 1em;" align="center"><a target="_blank" href="https://golangweekly.com/link/4924/web" style="color: #444 !important; text-decoration: none;">Go Newsletter</a></div>
+  
+  <div class="issuemetadata" style="color: #aaa; font-size: 16px; margin: 0 0 6px; padding: 0;">Issue 139 — December 15, 2016</div>
+  </td></tr>
+</table></center>
+
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td style="border-collapse: collapse; margin: 0; padding: 8px 8px 1em;">
+<!--[if mso]>
+	<center>
+  <table id="tableoutlook" width="640" style="width: 640px;"><tr><td>
+<![endif]-->
+<table class="container blocklogo go" align="center" width="100%" cellpadding="0" cellspacing="0" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; max-width: 640px; padding: 0px; table-layout: fixed; width: 100%;">
+  <tr>
+    <td style="border-collapse: collapse; margin: 0; padding: 0;">
+      <table class="section section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="name" style="border-bottom-width: 0px; border-collapse: collapse; color: #444; font-size: 17px; font-weight: bold; margin: 0; padding: 12px 0px; text-transform: uppercase;"><span>Featured</span></td>
+  </tr>
+  <tr>
+    <td class="contents" style="border-collapse: collapse; margin: 0; padding: 0;">
+      <table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4925/web" title="blog.gopheracademy.com/advent-2016/saga-go-dependency-management/" style="color: #0099b4;">The Saga of Go Dependency Management</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Next year, the Go dependency management landscape is likely to change quite a bit. Here, Sam Boyer ties up Go’s package management past, present, and future.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Sam Boyer </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4926/web" title="blog.golang.org/survey2016" style="color: #0099b4;">Participate in the Official 2016 Go User Survey</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Responses will help the Go team understand how they are doing and help plan improvements for the Go language, libraries, and tools both for individuals and companies.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">The Go Programming Language </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4927/web" title="blog.gopheracademy.com/advent-2016/some-tools-for-go-that-you-might-not-know-yet/" style="color: #0099b4;">Some Tools For Go You Might Not Know Yet</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">With the year coming to a close it’s a great time to polish up your toolset. Here’s a look at four tools you may be unfamiliar with: interfacer, zb, realize, and binstale.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Christoph Berger </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr>
+<td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4928/web" title="resources.codeship.com/ebooks/test-deploy-docker-apps-aws-elastic-beankstalk-ebs-aw/?utm_source=email-sponsorship&amp;utm_medium=cpc-go-weekly-primary&amp;utm_campaign=cooper-docker-elastic-beanstalk" style="color: #0099b4;">Testing and Deploying Docker Apps with Elastic Beanstalk</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">In this eBook you will learn how to prepare Elastic Beanstalk for Docker, how to build and push your Docker images to Docker Hub, and how to test and deploy your app to EBS with Codeship.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Codeship  <span class="tag tag-sponsored" style="background: #ffffaa; color: #663; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> sponsored </span>
+</div></td></tr>
+</table>
+</td>
+<td valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1em;"><a target="_blank" href="https://golangweekly.com/link/4928/web" style="color: #0099b4;"><img src="https://copm.s3.amazonaws.com/7d5e5a46.png" width="120" height="106" class="item" style="-ms-interpolation-mode: bicubic; border: 0; display: block; margin-left: 8px; max-height: 133px; outline: none;"></a></td>
+</tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4929/web" title="blog.gopheracademy.com/advent-2016/contributing-to-the-go-project/" style="color: #0099b4;">Contributing to the Go Project</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">An attempt to demystify the process behind contributing to Go to encourage you to tackle an issue or solve a bug for yourself.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Matt Layher </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4930/web" title="www.youtube.com/watch?v=oxc8B2fjDvY" style="color: #0099b4;">How to Write Your Own Go Tool</a>  <span class="tag tag-video" style="background: #DA281E; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> video </span>
+</div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Software Engineer Fatih Arslan runs through the various Go parser family packages and how to use them to create your own Go tool from scratch. <em>23 minutes</em>.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Fatih Arslan </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4931/web" title="www.jetbrains.com/go/" style="color: #0099b4;">Gogland: A Forthcoming Go IDE from JetBrains</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Early access program only for now, but looks promising, particularly if you use their other IDEs.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">JetBrains </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-featured" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.5em;">
+<table class="item section-featured" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 19px; font-weight: 500; line-height: 1.4em; margin: 0 0 2px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4932/web" title="appliedgo.net/mapreduce/" style="color: #0099b4;">MapReduce and Munching Through Big Data</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">How Google tackled the problem of processing enormous amounts of data, and how you can do the same with Go.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Applied Go </div></td></tr>
+</table>
+</td></tr></table>
+
+    </td>
+  </tr>
+</table>
+<table class="section section-jobs" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="name" style="border-bottom-width: 0px; border-collapse: collapse; color: #444; font-size: 17px; font-weight: bold; margin: 0; padding: 12px 0px; text-transform: uppercase;"><span>Jobs</span></td>
+  </tr>
+  <tr>
+    <td class="contents" style="border-collapse: collapse; margin: 0; padding: 0;">
+      <table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-jobs" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-jobs" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4933/web" title="jobs.groupon.com/jobs/P30471" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Go Senior Software Engineer (Palo Alto)</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">We’re the team building services in Go around our infrastructure (LBs, CMDBs, VM Infrastructure) to fully automate its management and boost the productivity of the organization. Isn’t that a big enough challenge?</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Groupon </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-jobs" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-jobs" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4934/web" title="hired.com/?utm_source=newsletters&amp;utm_medium=petercooperpress&amp;utm_campaign=q4-16-gonewsletter" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Find Your Perfect Fit - Try Hired</a> </div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Finding the right role can be daunting, but not on Hired. Get empowered to find the right role with multiple job offers and free personalized support.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Hired </div></td></tr>
+</table>
+</td></tr></table>
+
+    </td>
+  </tr>
+</table>
+<table class="section section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="name" style="border-bottom-width: 0px; border-collapse: collapse; color: #444; font-size: 17px; font-weight: bold; margin: 0; padding: 12px 0px; text-transform: uppercase;"><span>In Brief</span></td>
+  </tr>
+  <tr>
+    <td class="contents" style="border-collapse: collapse; margin: 0; padding: 0;">
+      <table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4935/web" title="freecontent.manning.com/gobooks/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Manning Doing a 50% Off Sale on Go Language Books Today (Only)</a>  <span class="tag tag-news" style="background: #909; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> news </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Manning </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4936/web" title="golang.rakyll.org/http2push/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Go 1.8 to Feature Support for HTTP/2 Server Push</a>  <span class="tag tag-news" style="background: #909; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> news </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Jaana Burcu Dogan </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4937/web" title="blog.gopheracademy.com/advent-2016/database_sql/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">New Features in Go 1.8's database/sql Package</a>  <span class="tag tag-news" style="background: #909; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> news </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Daniel Theophanes </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4938/web" title="blog.gopheracademy.com/advent-2016/go-timers/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">How Do They Do It: Timers in Go</a>  <span class="tag tag-tutorial" style="background: #396; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tutorial </span>
+</div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Covers the internal implementation of timers in Go, with plenty of example repo links to follow.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Alexander Morozov and Vyacheslav Bakhmutov </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4939/web" title="blog.gopheracademy.com/advent-2016/goroutree/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Goroutree: A Tree-Based Set Made of Coordinating Goroutines</a>  <span class="tag tag-tutorial" style="background: #396; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tutorial </span> <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Scott Mansfield </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4940/web" title="blog.gopheracademy.com/advent-2016/pachyderm/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Data Pipelines and Versioning with the Pachyderm Go Client</a>  <span class="tag tag-tutorial" style="background: #396; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tutorial </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Daniel Whitenack </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4941/web" title="divan.github.io/posts/avoid_gotchas/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">How to Avoid Go Gotchas By Learning Internals</a>  <span class="tag tag-tutorial" style="background: #396; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tutorial </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Ivan Daniluk </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4942/web" title="dave.cheney.net/2016/12/15/declaration-scopes-in-go" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Declaration Scopes in Go</a>  <span class="tag tag-tutorial" style="background: #396; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tutorial </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Dave Cheney </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4943/web" title="www.youtube.com/watch?v=OVBvOuxbpHA" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">How to Create a URL Shortener with Go and Couchbase</a>  <span class="tag tag-video" style="background: #DA281E; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> video </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Nic Raboy </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4944/web" title="blog.gopheracademy.com/advent-2016/go-and-package-focused-design/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Go and a Package Focused Design</a>  <span class="tag tag-opinion" style="background: #970; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> opinion </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Carlisia Pinto </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4945/web" title="www.exago.io/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Code Quality Reports, A Free Service to Measure Go Project Quality</a>  <span class="tag tag-tools" style="background: #589; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tools </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Exago<span>.​</span>io </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4946/web" title="www.launchbit.com/taz/11162-6712-111" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">The Admin Interface Framework</a>  <span class="tag tag-tools" style="background: #589; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> tools </span>
+</div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Generate the admin interface of your application. Simply run npm install -g lumber-cli then lumber generate to get started.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Lumber  <span class="tag tag-sponsored" style="background: #ffffaa; color: #663; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> sponsored </span>
+</div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4947/web" title="github.com/relab/gorums" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Gorums: Framework for Implementing Fault-Tolerant Quorum-Based Protocols</a>  <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Resilient Systems Lab </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4948/web" title="github.com/mtojek/greenwall" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Greenwall: Tiny Service Health Dashboard Written in Go</a>  <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Marcin Tojek </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4949/web" title="agonzalezro.github.io/botella/" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Botella: Build a Chat Bot with Docker Plugins</a>  <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Flexible and uses Docker containers for plugins so you can build them however you like.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Alex Gonzalezro </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4950/web" title="godoc.org/github.com/zillow/godash" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">godash: Utility Functions for Manipulating Slices</a>  <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  <tr>
+    <td class="body" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="color: #555; font-size: 14px; line-height: 1.4em; margin: 0 0 2px; padding: 0;">Inspired by JavaScript’s <em>Lodash</em>.</div></td>
+  </tr>
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Zillow </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4951/web" title="github.com/samonzeweb/godb" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">godb: A Simple Go ORM That Maps Between SQL and Structs</a>  <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Samuel Gay </div></td></tr>
+</table>
+</td></tr></table>
+<table style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;"><tr><td class="itempad section-brief" valign="top" style="border-collapse: collapse; margin: 0; padding: 0 0 1.0em;">
+<table class="item section-brief" style="border-spacing: 0px; color: #333333; font-family: 'Helvetica Neue', Helvetica, arial, sans-serif; font-size: 14px; line-height: 1.4em; table-layout: fixed;">
+  <tr>
+    <td class="link" style="border-collapse: collapse; margin: 0; padding: 0;"><div style="font-size: 16px; font-weight: normal; line-height: 1.4em; margin: 0 0 0px; padding: 0;">
+<a target="_blank" class="main" href="https://golangweekly.com/link/4952/web" title="github.com/glycerine/zygomys" style="color: #0099b4; font-size: 16px; font-weight: normal; line-height: 1.4em; margin-bottom: 0px;">Zygomys: A LISP-Based Embedded Scripting Language for Go</a>  <span class="tag tag-code" style="background: #0cc; color: white; display: inline-block; font-family: verdana, tahoma, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; text-transform: uppercase;"> code </span>
+</div></td>
+  </tr>
+  
+	  <tr><td class="source" style="border-collapse: collapse; margin: 0; padding: 0; text-transform: uppercase;"><div style="color: #aaa; font-size: 12px; font-style: italic; line-height: 18px; margin: 0; padding: 0;">Jason E<span>.​</span> Aten </div></td></tr>
+</table>
+</td></tr></table>
+
+    </td>
+  </tr>
+</table>
+
+
+    </td>
+  </tr>
+	
+</table>
+<!--[if mso]>
+  </td></tr></table>
+  </center>
+<![endif]-->
+</td></tr></table>
+
+
+</body></div>
+
+<div class="pager">
+    <div class="prev">
+      
+        <a href="/issues/138">&laquo; Prev</a>
+      
+    </div>
+    <div class="center">
+      <!-- Issue 139 -->
+    </div>
+    <div class="next">
+      
+        <a href="/issues/140">Next &raquo;</a>
+      
+    </div>
+  </div>
+
+  <div class="subscribe_box" class="">
+<form class="subscribe" action="/subscribe" method="POST">
+  <input type="email" placeholder="Want to subscribe? Enter your address here" class="email" name="email" id="email" /><button class="awesome" type="submit">Subscribe now &raquo;</button>
+  <div class="smallprint">Easy to unsubscribe at any time. Your e-mail address <a href="https://cooperpress.com/spam.html">is safe</a> &mdash; here's <a href="https://cooperpress.com/legal/privacy/">our privacy policy.</a></div>
+  <input type="hidden" name="_csrf" value="lVJ-VgTp3y4B4-NN1-3dI12KQ90raZyB3bAUtdFfG8o" />
+</form>
+</div>
+
+
+</section>
+
+<img src="/open/139/web" />
+</main>
+  <script src="/js/app.js"></script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1213763378662807'); fbq('track', 'PageView');</script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1213763378662807&ev=PageView&noscript=1" /></noscript>
+
+</body>
+</html>
