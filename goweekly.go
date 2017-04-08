@@ -39,13 +39,24 @@ func (it *Issue) Parse() error {
 	}
 	it.Items = []*Item{}
 	it.Doc.Find("table.item").Each(func(i int, s *goquery.Selection) {
+		// classes, _ := s.Attr("class")
+		// fmt.Printf("-- %s\n", classes)
+		// fmt.Println(s.HasClass("section-jobs"))
+		if s.HasClass("section-jobs") {
+			return
+		}
 		link := s.Find("a")
 		if link == nil {
 			return
 		}
 		url, _ := link.Attr("title")
 		desc := strings.TrimSpace(s.Find("td.body > div").Text())
-		source := strings.TrimSpace(s.Find("td.source > div").Text())
+		sourceEl := s.Find("td.source > div")
+		if sourceEl.Has("span.tag-sponsored").Length() > 0 {
+			return
+		}
+		source := strings.TrimSpace(sourceEl.Text())
+
 		href, _ := link.Attr("href")
 		item := &Item{
 			InternalLink: href,
@@ -61,7 +72,8 @@ func (it *Issue) Parse() error {
 				list := strings.Split(classes, " ")
 				for _, c := range list {
 					if c != "tag" {
-						item.Tags = append(item.Tags, strings.Replace(c, "tag-", "", 1))
+						tag := strings.Replace(c, "tag-", "", 1)
+						item.Tags = append(item.Tags, tag)
 					}
 				}
 			}
