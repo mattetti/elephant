@@ -37,6 +37,18 @@ func (it *Issue) Parse() error {
 	if it == nil {
 		return fmt.Errorf("failed to parse the issue (nil)")
 	}
+	if metadata := it.Doc.Find("div.issuemetadata").Text(); metadata != "" {
+		// Issue 99 — March  3, 2016
+		chunks := strings.Split(metadata, "—")
+		if len(chunks) > 1 {
+			dateStr := strings.TrimSpace(chunks[1])
+			var err error
+			it.Date, err = time.Parse("January 2, 2006", dateStr)
+			if err != nil {
+				fmt.Println("failed parsing date", dateStr, err)
+			}
+		}
+	}
 	it.Items = []*Item{}
 	it.Doc.Find("table.item").Each(func(i int, s *goquery.Selection) {
 		// classes, _ := s.Attr("class")
@@ -65,6 +77,7 @@ func (it *Issue) Parse() error {
 			Link:         url,
 			Desc:         desc,
 			Tags:         []string{},
+			Date:         it.Date,
 		}
 		spanTag := link.Parent().Find("span.tag")
 		if spanTag != nil {
